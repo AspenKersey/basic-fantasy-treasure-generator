@@ -24,6 +24,26 @@ class Application(Frame):
                     variable = self.chkBtnA
                     ).grid(row = 2, column = 0)
     
+        self.chkBtnB = BooleanVar()
+        Checkbutton(self, text = "B",
+                    variable = self.chkBtnB
+                    ).grid(row = 2, column = 1)
+    
+        self.chkBtnC = BooleanVar()
+        Checkbutton(self, text = "C",
+                    variable = self.chkBtnA
+                    ).grid(row = 2, column = 2)
+    
+        self.chkBtnD = BooleanVar()
+        Checkbutton(self, text = "D",
+                    variable = self.chkBtnA
+                    ).grid(row = 2, column = 3)
+    
+        self.chkBtnE = BooleanVar()
+        Checkbutton(self, text = "E",
+                    variable = self.chkBtnA
+                    ).grid(row = 2, column = 4)
+    
 
 
 #main section
