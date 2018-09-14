@@ -149,14 +149,19 @@ class Application(Frame):
      
         
         ttk.Separator(self, orient=HORIZONTAL).grid(row=12, column=0,
-                                                    columnspan=5, sticky="ew")
+                                                    columnspan=3, sticky="ew")
         
-        Label(self, text="Treasure Report").grid(row=13, column=0, columnspan=5,
+        Label(self, text="Treasure").grid(row=13, column=0, columnspan=5,
                                                  sticky="w")
         
+        self.btnGenerateReport = Button(self, text="Generate",
+                                        command=self.generate_report)
+        self.btnGenerateReport.grid(row=13, column=3, columnspan=2)
+
+
         self.textBoxReport = Text(self, width = 50, height = 20, wrap = WORD)
         self.textBoxReport.grid(row=14, column =0, columnspan=5)
-        
+
     def clear_lair_types(self):
         """clear the lair type checkboxes"""
         self.chkBtnA = self.chkBtnB = False
@@ -164,6 +169,12 @@ class Application(Frame):
     def clear_ind_types(self):
         """clear the lair type checkboxes"""
         self.chkBtnP = self.chkBtnQ = False
+        
+    def generate_report(self):
+        """ calculate treasure and display the results"""
+        message = "treasure results go here."
+        self.textBoxReport.delete(0.0,END)
+        self.textBoxReport.insert(0.0, message)
         
         
 #main section
