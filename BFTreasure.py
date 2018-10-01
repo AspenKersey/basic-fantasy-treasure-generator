@@ -8,7 +8,7 @@ from tkinter import ttk
 from tkinter import font
 from tkinter import simpledialog
 from random import randint
-import TreasureType
+from TreasureType import *
 
 class Application(Frame):
     
@@ -187,6 +187,7 @@ class Application(Frame):
     def generate_report(self):
         """ calculate treasure and display the results"""
         message = "LAIR\n------------------------------\n"
+        self.run_through_lair_treasures()
 
         message += "INDIVIDUAL\n------------------------------\n"
         if self.chkBtnQ.get():
@@ -203,8 +204,28 @@ class Application(Frame):
         self.multiplier = \
           simpledialog.askinteger("Input", "Type "+treasureType+" multiplier?",
                                   minvalue=1, maxvalue=99)
-                                                  
+
+    def run_through_lair_treasures(self):
+      lairTreasureLists = []
+      self.cp =0
+      self.sp =0
+      self.ep =0
+      self.gp =0
+      self.pp =0
+      
+      lairTreasureLists.append(type_a())
+      
+      for list in lairTreasureLists:
+        self.cp += list[0]
+        self.sp += list[1]
+        self.ep += list[2]
+        self.gp += list[3]
+        self.pp += list[4]
         
+      print(self.cp, self.sp, self.ep, self.gp, self.pp)
+        
+      
+
 #main section
 print(randint(1,6))
 root = Tk()
