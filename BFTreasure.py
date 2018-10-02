@@ -177,8 +177,9 @@ class Application(Frame):
 
     def clear_lair_types(self):
         """clear the lair type checkboxes"""
-        self.chkBtnA = self.chkBtnB = False
-    
+        self.chkBtnA.set(False)
+        self.chkBtnB.set(False)
+        
     def clear_ind_types(self):
         """clear the lair type checkboxes"""
         self.chkBtnP.set(0)
@@ -213,7 +214,8 @@ class Application(Frame):
       self.gp =0
       self.pp =0
       
-      lairTreasureLists.append(type_a())
+      if self.chkBtnA.get():
+          lairTreasureLists.append(type_a())
       
       for list in lairTreasureLists:
         self.cp += list[0]
