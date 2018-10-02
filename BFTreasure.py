@@ -30,6 +30,9 @@ class Application(Frame):
         
     def create_widgets(self):
         """ create widgets in frame """
+        self.bind_all('<Key>',self.key)
+        
+        
         self.lblLair = Label(self, text = "Lair Types")
         self.lblLair.grid(row = 0, column = 0, columnspan = 3, sticky="w")
         
@@ -174,6 +177,38 @@ class Application(Frame):
 
         self.textBoxReport = Text(self, width = 50, height = 15, wrap = WORD)
         self.textBoxReport.grid(row=14, column =0, columnspan=8)
+        
+    def key(self, event):
+        if event.char in  ('a','A'):
+            if self.chkBtnA.get()==False:
+                self.chkBtnA.set(True)
+            else:
+                self.chkBtnA.set(False)
+                
+        if event.char in  ('b','B'):
+            if self.chkBtnB.get()==False:
+                self.chkBtnB.set(True)
+            else:
+                self.chkBtnB.set(False)
+                
+        if event.char in  ('c','C'):
+            if self.chkBtnC.get()==False:
+                self.chkBtnC.set(True)
+            else:
+                self.chkBtnC.set(False)
+                
+        if event.char in  ('d','D'):
+            if self.chkBtnD.get()==False:
+                self.chkBtnD.set(True)
+            else:
+                self.chkBtnD.set(False)
+                
+        if event.char in  ('e','E'):
+            if self.chkBtnE.get()==False:
+                self.chkBtnE.set(True)
+            else:
+                self.chkBtnE.set(False)
+
 
     def clear_lair_types(self):
         """clear the lair type checkboxes"""
@@ -237,4 +272,5 @@ default_font = font.nametofont("TkDefaultFont")
 default_font.configure(size=20)
 
 app = Application(root)
+
 root.mainloop()
