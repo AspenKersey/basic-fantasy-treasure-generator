@@ -209,16 +209,136 @@ class Application(Frame):
             else:
                 self.chkBtnE.set(False)
 
+        if event.char in  ('f', 'F'):
+            if self.chkBtnF.get()==False:
+                self.chkBtnF.set(True)
+            else:
+                self.chkBtnF.set(False)
+                
+        if event.char in  ('g','G'):
+            if self.chkBtnG.get()==False:
+                self.chkBtnG.set(True)
+            else:
+                self.chkBtnG.set(False)
+                
+        if event.char in  ('h','H'):
+            if self.chkBtnH.get()==False:
+                self.chkBtnH.set(True)
+            else:
+                self.chkBtnH.set(False)
+                
+        if event.char in  ('i','I'):
+            if self.chkBtnI.get()==False:
+                self.chkBtnI.set(True)
+            else:
+                self.chkBtnI.set(False)
+                
+        if event.char in  ('j','J'):
+            if self.chkBtnJ.get()==False:
+                self.chkBtnJ.set(True)
+            else:
+                self.chkBtnJ.set(False)
+                
+        if event.char in  ('k','K'):
+            if self.chkBtnK.get()==False:
+                self.chkBtnK.set(True)
+            else:
+                self.chkBtnK.set(False)
+                
+        if event.char in  ('l','L'):
+            if self.chkBtnL.get()==False:
+                self.chkBtnL.set(True)
+            else:
+                self.chkBtnL.set(False)
+                
+        if event.char in  ('m','M'):
+            if self.chkBtnM.get()==False:
+                self.chkBtnM.set(True)
+            else:
+                self.chkBtnM.set(False)
+                
+        if event.char in  ('n','N'):
+            if self.chkBtnN.get()==False:
+                self.chkBtnN.set(True)
+            else:
+                self.chkBtnN.set(False)
+                
+        if event.char in  ('o','O'):
+            if self.chkBtnO.get()==False:
+                self.chkBtnO.set(True)
+            else:
+                self.chkBtnO.set(False)
+                
+        if event.char in  ('p','P'):
+            if self.chkBtnP.get()==False:
+                self.chkBtnP.set(True)
+            else:
+                self.chkBtnP.set(False)
+                
+        if event.char in  ('q','Q'):
+            if self.chkBtnQ.get()==False:
+                self.chkBtnQ.set(True)
+            else:
+                self.chkBtnQ.set(False)
+                
+        if event.char in  ('r','R'):
+            if self.chkBtnR.get()==False:
+                self.chkBtnR.set(True)
+            else:
+                self.chkBtnR.set(False)
+                
+        if event.char in  ('s','S'):
+            if self.chkBtnS.get()==False:
+                self.chkBtnS.set(True)
+            else:
+                self.chkBtnS.set(False)
+                
+        if event.char in  ('t','T'):
+            if self.chkBtnT.get()==False:
+                self.chkBtnT.set(True)
+            else:
+                self.chkBtnT.set(False)        
+
+        if event.char in  ('u','U'):
+            if self.chkBtnU.get()==False:
+                self.chkBtnU.set(True)
+            else:
+                self.chkBtnU.set(False)
+                
+        if event.char in  ('v','V'):
+            if self.chkBtnV.get()==False:
+                self.chkBtnV.set(True)
+            else:
+                self.chkBtnV.set(False)        
+
 
     def clear_lair_types(self):
         """clear the lair type checkboxes"""
         self.chkBtnA.set(False)
         self.chkBtnB.set(False)
+        self.chkBtnC.set(False)
+        self.chkBtnD.set(False)
+        self.chkBtnE.set(False)
+        self.chkBtnF.set(False)
+        self.chkBtnG.set(False)
+        self.chkBtnH.set(False)
+        self.chkBtnI.set(False)
+        self.chkBtnJ.set(False)
+        self.chkBtnK.set(False)
+        self.chkBtnL.set(False)
+        self.chkBtnM.set(False)
+        self.chkBtnN.set(False)
+        self.chkBtnO.set(False)
         
     def clear_ind_types(self):
         """clear the lair type checkboxes"""
         self.chkBtnP.set(0)
         self.chkBtnQ.set(0)
+        self.chkBtnR.set(0)
+        self.chkBtnS.set(0)
+        self.chkBtnT.set(0)
+        self.chkBtnU.set(0)
+        self.chkBtnV.set(0)
         
     def generate_report(self):
         """ calculate treasure and display the results"""
@@ -242,25 +362,25 @@ class Application(Frame):
                                   minvalue=1, maxvalue=99)
 
     def run_through_lair_treasures(self):
-      lairTreasureLists = []
-      self.cp =0
-      self.sp =0
-      self.ep =0
-      self.gp =0
-      self.pp =0
-      
-      if self.chkBtnA.get():
-          lairTreasureLists.append(type_a())
-      
-      for list in lairTreasureLists:
-        self.cp += list[0]
-        self.sp += list[1]
-        self.ep += list[2]
-        self.gp += list[3]
-        self.pp += list[4]
+        lairTreasureLists = []
+        self.cp =0
+        self.sp =0
+        self.ep =0
+        self.gp =0
+        self.pp =0
         
-      print(self.cp, self.sp, self.ep, self.gp, self.pp)
-        
+        if self.chkBtnA.get():
+            lairTreasureLists.append(type_a())
+      
+        for list in lairTreasureLists:
+            self.cp += list[0]
+            self.sp += list[1]
+            self.ep += list[2]
+            self.gp += list[3]
+            self.pp += list[4]
+          
+            print(self.cp, self.sp, self.ep, self.gp, self.pp)
+              
       
 
 #main section
