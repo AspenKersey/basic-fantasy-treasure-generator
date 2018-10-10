@@ -343,7 +343,7 @@ class Application(Frame):
     def generate_report(self):
         """ calculate treasure and display the results"""
         message = "LAIR\n------------------------------\n"
-        self.run_through_lair_treasures()
+        message += self.run_through_lair_treasures()
 
         message += "INDIVIDUAL\n------------------------------\n"
         if self.chkBtnQ.get():
@@ -362,6 +362,7 @@ class Application(Frame):
                                   minvalue=1, maxvalue=99)
 
     def run_through_lair_treasures(self):
+        msg = ""
         lairTreasureLists = []
         self.cp =0
         self.sp =0
@@ -379,8 +380,13 @@ class Application(Frame):
             self.gp += list[3]
             self.pp += list[4]
           
-            print(self.cp, self.sp, self.ep, self.gp, self.pp)
-              
+        msg =  "   " + str(self.cp) + " copper pieces\n"
+        msg += "   " + str(self.sp) + " silver pieces\n"
+        msg += "   " + str(self.ep) + " electrum pieces\n"
+        msg += "   " + str(self.gp) + " gold pieces\n"
+        msg += "   " + str(self.pp) + " platinum pieces\n\n"
+        
+        return msg
       
 
 #main section
