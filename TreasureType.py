@@ -22,17 +22,41 @@ def type_a():
   electrum = 0
   gold = 0
   platinum = 0
+  gems = 0
+  jewels = 0
+  magic = ""
+  
   #copper
   if percent_less_than(50):
-    copper += die_roller(5,6)
+    copper += die_roller(5,6) *100
+  
+  #silver
   if percent_less_than(60):
-    silver += die_roller(5,6)
+    silver += die_roller(5,6)*100
+  
+  #electrum
   if percent_less_than(40):
-    electrum += die_roller(5,4)
+    electrum += die_roller(5,4)*100
+  
+  #gold
   if percent_less_than(70):
-    gold += die_roller(10,6)
+    gold += die_roller(10,6)*100
+  
+  #platinum
   if percent_less_than(50):
-    platinum += die_roller(1,10)
-  return (copper, silver, electrum, gold, platinum)
-
+    platinum += die_roller(1,10)*100
+  
+  #gems
+  if percent_less_than(50):
+    gems += die_roller(6,6)
+  
+  #jewelry
+  if percent_less_than(50):
+    jewels += die_roller(6,6)
+  
+  #magic items
+  if percent_less_than(30):
+    magic += "Any 3"  
+  
+  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
 

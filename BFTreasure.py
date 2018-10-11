@@ -23,6 +23,9 @@ class Application(Frame):
         self.ep=0
         self.gp=0
         self.pp=0
+        self.gems=0
+        self.jewels=0
+        self.magic=[]  #list of strings
         self.multiplier=1
         
         self.create_widgets()
@@ -369,6 +372,9 @@ class Application(Frame):
         self.ep =0
         self.gp =0
         self.pp =0
+        self.gems =0
+        self.jewels=0
+        self.magic =[]
         
         if self.chkBtnA.get():
             lairTreasureLists.append(type_a())
@@ -379,13 +385,28 @@ class Application(Frame):
             self.ep += list[2]
             self.gp += list[3]
             self.pp += list[4]
+            self.gems += list[5]
+            self.jewels += list [6]
+            self.magic.append(list[7])
           
         msg =  "   " + str(self.cp) + " copper pieces\n"
         msg += "   " + str(self.sp) + " silver pieces\n"
         msg += "   " + str(self.ep) + " electrum pieces\n"
         msg += "   " + str(self.gp) + " gold pieces\n"
-        msg += "   " + str(self.pp) + " platinum pieces\n\n"
+        msg += "   " + str(self.pp) + " platinum pieces\n"
+        msg += "   " + str(self.gems) + " gems\n"
+        msg += "   " + str(self.jewels) + " pieces of jewelry\n"
         
+        msg += "  MAGIC ITEMS\n"
+        msg += "  -----------\n"
+        
+        if self.magic[0] == "":
+            msg += "   NONE\n"
+        else:
+            for item in self.magic:
+                msg += "   " + item + "\n"
+        
+        msg += "\n"
         return msg
       
 
