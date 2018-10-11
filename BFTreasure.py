@@ -379,34 +379,38 @@ class Application(Frame):
         if self.chkBtnA.get():
             lairTreasureLists.append(type_a())
       
-        for list in lairTreasureLists:
-            self.cp += list[0]
-            self.sp += list[1]
-            self.ep += list[2]
-            self.gp += list[3]
-            self.pp += list[4]
-            self.gems += list[5]
-            self.jewels += list [6]
-            self.magic.append(list[7])
-          
-        msg =  "   " + str(self.cp) + " copper pieces\n"
-        msg += "   " + str(self.sp) + " silver pieces\n"
-        msg += "   " + str(self.ep) + " electrum pieces\n"
-        msg += "   " + str(self.gp) + " gold pieces\n"
-        msg += "   " + str(self.pp) + " platinum pieces\n"
-        msg += "   " + str(self.gems) + " gems\n"
-        msg += "   " + str(self.jewels) + " pieces of jewelry\n"
+        if self.chkBtnB.get():
+            lairTreasureLists.append(type_b())
         
-        msg += "  MAGIC ITEMS\n"
-        msg += "  -----------\n"
-        
-        if self.magic[0] == "":
-            msg += "   NONE\n"
-        else:
-            for item in self.magic:
-                msg += "   " + item + "\n"
-        
-        msg += "\n"
+        if len(lairTreasureLists) != 0:        
+            for list in lairTreasureLists:
+                self.cp += list[0]
+                self.sp += list[1]
+                self.ep += list[2]
+                self.gp += list[3]
+                self.pp += list[4]
+                self.gems += list[5]
+                self.jewels += list [6]
+                self.magic.append(list[7])
+              
+            msg =  "   " + str(self.cp) + " copper pieces\n"
+            msg += "   " + str(self.sp) + " silver pieces\n"
+            msg += "   " + str(self.ep) + " electrum pieces\n"
+            msg += "   " + str(self.gp) + " gold pieces\n"
+            msg += "   " + str(self.pp) + " platinum pieces\n"
+            msg += "   " + str(self.gems) + " gems\n"
+            msg += "   " + str(self.jewels) + " pieces of jewelry\n"
+            
+            msg += "  MAGIC ITEMS\n"
+            msg += "  -----------\n"
+            
+            if self.magic[0] == "":
+                msg += "   NONE\n"
+            else:
+                for item in self.magic:
+                    msg += "   " + item + "\n"
+            
+            msg += "\n"
         return msg
       
 

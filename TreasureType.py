@@ -60,3 +60,47 @@ def type_a():
   
   return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
+def type_b():
+  copper = 0
+  silver = 0
+  electrum = 0
+  gold = 0
+  platinum = 0
+  gems = 0
+  jewels = 0
+  magic = ""
+  
+  #copper
+  if percent_less_than(75):
+    copper += die_roller(5,10) *100
+  
+  #silver
+  if percent_less_than(50):
+    silver += die_roller(5,6)*100
+  
+  #electrum
+  if percent_less_than(50):
+    electrum += die_roller(5,4)*100
+  
+  #gold
+  if percent_less_than(50):
+    gold += die_roller(3,6)*100
+  
+  #platinum
+  if percent_less_than(-1):
+    platinum += die_roller(0,0)*100
+  
+  #gems
+  if percent_less_than(25):
+    gems += die_roller(1,6)
+  
+  #jewelry
+  if percent_less_than(25):
+    jewels += die_roller(1,6)
+  
+  #magic items
+  if percent_less_than(10):
+    magic += "1 weapon or armor"  
+  
+  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+
