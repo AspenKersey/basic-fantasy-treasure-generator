@@ -399,6 +399,30 @@ class Application(Frame):
       
         if self.chkBtnH.get():
             lairTreasureLists.append(type_h())
+            
+        if self.chkBtnI.get():
+            lairTreasureLists.append(type_i())
+      
+        if self.chkBtnJ.get():
+            lairTreasureLists.append(type_j())
+        
+        if self.chkBtnK.get():
+            lairTreasureLists.append(type_k())
+      
+        if self.chkBtnL.get():
+            lairTreasureLists.append(type_l())
+        
+        if self.chkBtnM.get():
+            lairTreasureLists.append(type_m())
+      
+        if self.chkBtnN.get():
+            lairTreasureLists.append(type_n())
+
+        if self.chkBtnO.get():
+            lairTreasureLists.append(type_o())
+      
+        if self.chkBtnP.get():
+            lairTreasureLists.append(type_p())
                 
         if len(lairTreasureLists) != 0:        
             for list in lairTreasureLists:
