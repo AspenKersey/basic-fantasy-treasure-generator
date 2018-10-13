@@ -602,7 +602,7 @@ def type_m():
   
   #gold
   if percent_less_than(90):
-    gold += die_roller(4,10)100
+    gold += die_roller(4,10)*100
   
   #platinum
   if percent_less_than(90):
@@ -679,8 +679,8 @@ def type_o():
 
   #magic items
   if percent_less_than(50):
-    magic += "1d4 scrolls"  
-    
+    magic += "1d4 scrolls"
+        
   return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
@@ -700,41 +700,21 @@ def type_p():
   magic = ""
   
   #copper
-  if percent_less_than(75):
-    copper += die_roller(8,10) *100
-  
+  copper += die_roller(3,8)
+    
   #silver
-  if percent_less_than(75):
-    silver += die_roller(6,10)*10*100
-  
   #electrum
-  if percent_less_than(75):
-    electrum += die_roller(3,10)*10*100
-  
   #gold
-  if percent_less_than(75):
-    gold += die_roller(5,8)*10*100
-  
   #platinum
-  if percent_less_than(75):
-    platinum += die_roller(9,8)*100
-  
   #gems
-  if percent_less_than(50):
-    gems += die_roller(1,100)
-  
   #jewelry
-  if percent_less_than(50):
-    jewels += die_roller(10,4)
-  
   #magic items
-  if percent_less_than(20):
-    magic += "any 1d4 + 1 potion + 1 scroll"  
+  '''none''' 
   
   return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_h():
+def type_q():
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -750,41 +730,23 @@ def type_h():
   magic = ""
   
   #copper
-  if percent_less_than(75):
-    copper += die_roller(8,10) *100
-  
+  '''none'''
+    
   #silver
-  if percent_less_than(75):
-    silver += die_roller(6,10)*10*100
+  silver += die_roller(3,8)  
   
   #electrum
-  if percent_less_than(75):
-    electrum += die_roller(3,10)*10*100
-  
   #gold
-  if percent_less_than(75):
-    gold += die_roller(5,8)*10*100
-  
   #platinum
-  if percent_less_than(75):
-    platinum += die_roller(9,8)*100
-  
   #gems
-  if percent_less_than(50):
-    gems += die_roller(1,100)
-  
   #jewelry
-  if percent_less_than(50):
-    jewels += die_roller(10,4)
-  
   #magic items
-  if percent_less_than(20):
-    magic += "any 1d4 + 1 potion + 1 scroll"  
+  '''none'''   
   
   return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_h():
+def type_r():
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -800,41 +762,23 @@ def type_h():
   magic = ""
   
   #copper
-  if percent_less_than(75):
-    copper += die_roller(8,10) *100
-  
   #silver
-  if percent_less_than(75):
-    silver += die_roller(6,10)*10*100
+  '''none'''
   
   #electrum
-  if percent_less_than(75):
-    electrum += die_roller(3,10)*10*100
+  electrum += die_roller(2,6)
   
   #gold
-  if percent_less_than(75):
-    gold += die_roller(5,8)*10*100
-  
   #platinum
-  if percent_less_than(75):
-    platinum += die_roller(9,8)*100
-  
   #gems
-  if percent_less_than(50):
-    gems += die_roller(1,100)
-  
   #jewelry
-  if percent_less_than(50):
-    jewels += die_roller(10,4)
-  
   #magic items
-  if percent_less_than(20):
-    magic += "any 1d4 + 1 potion + 1 scroll"  
+  '''none'''
   
   return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_h():
+def type_s():
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -850,41 +794,23 @@ def type_h():
   magic = ""
   
   #copper
-  if percent_less_than(75):
-    copper += die_roller(8,10) *100
-  
   #silver
-  if percent_less_than(75):
-    silver += die_roller(6,10)*10*100
-  
   #electrum
-  if percent_less_than(75):
-    electrum += die_roller(3,10)*10*100
+  '''none'''
   
   #gold
-  if percent_less_than(75):
-    gold += die_roller(5,8)*10*100
+  gold += die_roller(2,4)
   
   #platinum
-  if percent_less_than(75):
-    platinum += die_roller(9,8)*100
-  
   #gems
-  if percent_less_than(50):
-    gems += die_roller(1,100)
-  
   #jewelry
-  if percent_less_than(50):
-    jewels += die_roller(10,4)
-  
   #magic items
-  if percent_less_than(20):
-    magic += "any 1d4 + 1 potion + 1 scroll"  
+  '''none'''
   
   return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_h():
+def type_t():
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -900,41 +826,23 @@ def type_h():
   magic = ""
   
   #copper
-  if percent_less_than(75):
-    copper += die_roller(8,10) *100
-  
   #silver
-  if percent_less_than(75):
-    silver += die_roller(6,10)*10*100
-  
   #electrum
-  if percent_less_than(75):
-    electrum += die_roller(3,10)*10*100
-  
   #gold
-  if percent_less_than(75):
-    gold += die_roller(5,8)*10*100
+  '''none'''
   
   #platinum
-  if percent_less_than(75):
-    platinum += die_roller(9,8)*100
+  platinum += die_roller(1,6)
   
   #gems
-  if percent_less_than(50):
-    gems += die_roller(1,100)
-  
   #jewelry
-  if percent_less_than(50):
-    jewels += die_roller(10,4)
-  
   #magic items
-  if percent_less_than(20):
-    magic += "any 1d4 + 1 potion + 1 scroll"  
-  
+  '''none'''
+
   return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_h():
+def type_u():
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -950,41 +858,39 @@ def type_h():
   magic = ""
   
   #copper
-  if percent_less_than(75):
-    copper += die_roller(8,10) *100
+  if percent_less_than(50):
+    copper += die_roller(1,20)
   
   #silver
-  if percent_less_than(75):
-    silver += die_roller(6,10)*10*100
+  if percent_less_than(50):
+    silver += die_roller(1,20)
   
   #electrum
-  if percent_less_than(75):
-    electrum += die_roller(3,10)*10*100
-  
+  '''none'''
+
   #gold
-  if percent_less_than(75):
-    gold += die_roller(5,8)*10*100
+  if percent_less_than(25):
+    gold += die_roller(1,20)
   
   #platinum
-  if percent_less_than(75):
-    platinum += die_roller(9,8)*100
+  '''none'''
   
   #gems
-  if percent_less_than(50):
-    gems += die_roller(1,100)
+  if percent_less_than(5):
+    gems += die_roller(1,4)
   
   #jewelry
-  if percent_less_than(50):
-    jewels += die_roller(10,4)
+  if percent_less_than(5):
+    jewels += die_roller(1,4)
   
   #magic items
-  if percent_less_than(20):
-    magic += "any 1d4 + 1 potion + 1 scroll"  
+  if percent_less_than(2):
+    magic += "any 1"  
   
   return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_h():
+def type_v():
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -1000,86 +906,34 @@ def type_h():
   magic = ""
   
   #copper
-  if percent_less_than(75):
-    copper += die_roller(8,10) *100
+  '''none'''
   
   #silver
-  if percent_less_than(75):
-    silver += die_roller(6,10)*10*100
+  if percent_less_than(25):
+    silver += die_roller(1,20)
   
   #electrum
-  if percent_less_than(75):
-    electrum += die_roller(3,10)*10*100
+  if percent_less_than(25):
+    electrum += die_roller(1,20)
   
   #gold
-  if percent_less_than(75):
-    gold += die_roller(5,8)*10*100
+  if percent_less_than(50):
+    gold += die_roller(1,20)
   
   #platinum
-  if percent_less_than(75):
-    platinum += die_roller(9,8)*100
+  if percent_less_than(25):
+    platinum += die_roller(1,20)
   
   #gems
-  if percent_less_than(50):
-    gems += die_roller(1,100)
+  if percent_less_than(10):
+    gems += die_roller(1,4)
   
   #jewelry
-  if percent_less_than(50):
-    jewels += die_roller(10,4)
+  if percent_less_than(10):
+    jewels += die_roller(1,4)
   
   #magic items
-  if percent_less_than(20):
-    magic += "any 1d4 + 1 potion + 1 scroll"  
+  if percent_less_than(5):
+    magic += "any 1"  
   
   return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
-
-
-def type_h():
-  '''calculates and returns amount of treasure based on type
-  
-  the treasure types are those listed in the treasure tables from page
-  130 of the Basic Fantasy Rulebook. '''  
-  
-  copper = 0
-  silver = 0
-  electrum = 0
-  gold = 0
-  platinum = 0
-  gems = 0
-  jewels = 0
-  magic = ""
-  
-  #copper
-  if percent_less_than(75):
-    copper += die_roller(8,10) *100
-  
-  #silver
-  if percent_less_than(75):
-    silver += die_roller(6,10)*10*100
-  
-  #electrum
-  if percent_less_than(75):
-    electrum += die_roller(3,10)*10*100
-  
-  #gold
-  if percent_less_than(75):
-    gold += die_roller(5,8)*10*100
-  
-  #platinum
-  if percent_less_than(75):
-    platinum += die_roller(9,8)*100
-  
-  #gems
-  if percent_less_than(50):
-    gems += die_roller(1,100)
-  
-  #jewelry
-  if percent_less_than(50):
-    jewels += die_roller(10,4)
-  
-  #magic items
-  if percent_less_than(20):
-    magic += "any 1d4 + 1 potion + 1 scroll"  
-  
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
-
