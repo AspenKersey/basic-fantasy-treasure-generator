@@ -434,13 +434,22 @@ class Application(Frame):
                 self.gems += list[5]
                 self.jewels += list [6]
                 self.magic.append(list[7])
-              
-            msg =  "   " + str(self.cp) + " copper pieces\n"
+            
+            msg =  "  COINS\n"
+            msg += "  -----\n"
+            msg += "   " + str(self.cp) + " copper pieces\n"
             msg += "   " + str(self.sp) + " silver pieces\n"
             msg += "   " + str(self.ep) + " electrum pieces\n"
             msg += "   " + str(self.gp) + " gold pieces\n"
             msg += "   " + str(self.pp) + " platinum pieces\n"
-            msg += "   " + str(self.gems) + " gems\n"
+            msg += "  GEMS\n"
+            msg += "  ----\n"
+            if self.gems == 0:
+                msg += "   NONE\n"
+            else:
+                for i in range(self.gems):
+                    msg += "   " + get_gem()
+                    
             msg += "   " + str(self.jewels) + " pieces of jewelry\n"
             
             msg += "  MAGIC ITEMS\n"

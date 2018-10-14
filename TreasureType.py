@@ -141,8 +141,6 @@ def type_c():
     electrum += die_roller(2,6)*100
   
   #gold
-  '''none'''
-  
   #platinum
   '''none'''
   
@@ -319,11 +317,7 @@ def type_g():
   magic = ""
   
   #copper
-  '''none'''
-  
   #silver
-  '''none'''
-  
   #electrum
   '''none'''
   
@@ -415,14 +409,8 @@ def type_i():
   magic = ""
   
   #copper
-  '''none'''
-  
   #silver
-  '''none'''
-  
   #electrum
-  '''none'''
-  
   #gold
   '''none'''
   
@@ -469,20 +457,10 @@ def type_j():
     silver += die_roller(1,8)*100
   
   #electrum
-  '''none'''
-  
   #gold
-  '''none'''
-  
   #platinum
-  '''none'''
-  
   #gems
-  '''none'''
-  
   #jewelry
-  '''none'''
-  
   #magic items
   '''none'''
   
@@ -516,17 +494,9 @@ def type_k():
     electrum += die_roller(1,8)*100
   
   #gold
-  '''none'''
-  
   #platinum
-  '''none'''
-  
   #gems
-  '''none'''
-  
   #jewelry
-  '''none'''
-  
   #magic items
   '''none'''
   
@@ -549,17 +519,9 @@ def type_l():
   magic = ""
   
   #copper
-  '''none'''
-  
   #silver
-  '''none'''
-  
-  #electrum
-  '''none'''
-  
+  #electrum  
   #gold
-  '''none'''
-  
   #platinum
   '''none'''
   
@@ -568,8 +530,6 @@ def type_l():
     gems += die_roller(1,4)
   
   #jewelry
-  '''none'''
-  
   #magic items
   '''none'''
   
@@ -592,11 +552,7 @@ def type_m():
   magic = ""
   
   #copper
-  '''none'''
-  
   #silver
-  '''none'''
-  
   #electrum
   '''none'''
   
@@ -937,3 +893,101 @@ def type_v():
     magic += "any 1"  
   
   return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+
+def gem_value():
+  '''calculates the value of a single gem, then returns it as a string
+  
+  also calls the helper function gem_adjust which alters the base class
+  and/or value of the gem.'''
+  
+  GEM_TYPES = ('Ornamental','Semiprecious','Fancy','Precious','Gem','Jewel')
+  VALUES = (10,50,100,500,1000,5000)
+  index = -1
+  gemType = ''
+  value = 0
+  multiplier = 0
+  result = die_roller(1,100)
+  
+  if result in range(1,21):
+    index = 0
+  elif result in range(21,46):
+    index = 1
+  elif result in range(46,76):
+    index = 2
+  elif result in range(76,96):
+    index = 3
+  else:
+    index = 4
+    
+  index, multiplier = gem_adjust(index)  
+  
+  gemType = GEM_TYPES[index]
+  value = int(VALUES[index]*multiplier)
+  
+  return gemType, str(value)
+
+def gem_adjust(index):
+  multiplier = 1.0
+  result = die_roller(2,6)
+  
+  if result == 2:
+    index -= 1
+    multiplier = 1
+  elif result == 3:
+    multiplier = .5
+  elif result == 4:
+    multiplier = .75
+  elif result in (5,6,7,8,9):
+    multiplier = 1.0
+  elif result == 10:
+    multiplier = 1.5
+  elif result == 11:
+    multiplier = 2.0
+  else:
+    multiplier =1.0
+    index += 1
+    
+  return (index, multiplier)
+
+def gem_name():
+  result = die_roller(1,100)
+  
+  if result in range(1,11):
+    return "Greenstone"
+  elif result in range(11,21):
+    return "Malachite"
+  elif result in range(21,29):
+    return "Aventurine"
+  elif result in range(29,39):
+    return "Phenalope"  
+  elif result in range(39,46):
+    return "Amethyst"  
+  elif result in range(46,55):
+    return "Fluorospar"  
+  elif result in range(55,61):
+    return "Garnet"  
+  elif result in range(61,66):
+    return "Alexandrite"  
+  elif result in range(66,71):
+    return "Topaz"  
+  elif result in range(71,76):
+    return "Bloodstone"  
+  elif result in range(76,80):
+    return "Sapphire"  
+  elif result in range(80,90):
+    return "Diamond"
+  elif result in range(90,95):
+    return "Fire Opal"
+  elif result in range(95,98):
+    return "Ruby"  
+  else:
+    return "Emerald"
+  
+
+def get_gem():
+  name = gem_name()
+  gemType, value = gem_value()
+  
+  msg = value + "gp   " + name + "(" + gemType +")\n"
+  
+  return msg
