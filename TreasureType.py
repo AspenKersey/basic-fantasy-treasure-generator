@@ -991,3 +991,18 @@ def get_gem():
   msg = value + "gp   " + name + "(" + gemType +")\n"
   
   return msg
+
+def get_jewelry():
+  ''' obtains the name and value of jewelry and returns it as a string'''
+  value = die_roller(2,8)*100
+  result = die_roller(1,100)
+  type = ""
+  
+  if result in (1,2,3,4,5,6):
+    type = 'Anklet'
+  elif result in(7,8,9,10,11,12):
+    type = "Belt"
+  elif result in (13,14):
+    type = ='Bowl'
+  elif
+
