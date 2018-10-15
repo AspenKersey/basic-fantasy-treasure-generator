@@ -988,7 +988,7 @@ def get_gem():
   name = gem_name()
   gemType, value = gem_value()
   
-  msg = value + "gp   " + name + "(" + gemType +")\n"
+  msg = value + "gp   " + name + "(" + gemType +")"
   
   return msg
 
@@ -996,13 +996,59 @@ def get_jewelry():
   ''' obtains the name and value of jewelry and returns it as a string'''
   value = die_roller(2,8)*100
   result = die_roller(1,100)
-  type = ""
+  jewelType = ""
   
   if result in (1,2,3,4,5,6):
-    type = 'Anklet'
+    jewelType = 'Anklet'
   elif result in(7,8,9,10,11,12):
-    type = "Belt"
+    jewelType = "Belt"
   elif result in (13,14):
-    type = ='Bowl'
-  elif
-
+    jewelType = 'Bowl'
+  elif result in (15,16,17,18,19,20,21):
+    jewelType = 'Bracelet'
+  elif result in (22,23,24,25,26,27):
+    jewelType = 'Brooch'
+  elif result in (28,29,30,31,32):
+    jewelType = 'Buckle'
+  elif result in (33,34,35,36,37):
+    jewelType = 'Chain'
+  elif result in (38,39,40):
+    jewelType = 'Choker'
+  elif result in (41,42):
+    jewelType = 'Circlet'
+  elif result in (43,44,45,46,47):
+    jewelType = 'Clasp'
+  elif result in (48,49,50,51):
+    jewelType = 'Comb'
+  elif result == 52:
+    jewelType = 'Crown'
+  elif result in (53,54,55):
+    jewelType = 'Cup'
+  elif result in (56,57,58,59,60,61,62):
+    jewelType = 'Earring'
+  elif result in (63,64,65):
+    jewelType = 'Flagon'
+  elif result in (66,67,68):
+    jewelType = 'Goblet'
+  elif result in (69,70,71,72,73):
+    jewelType = 'Knife'
+  elif result in (74,75,76,77):
+    jewelType = 'Letter Opener'
+  elif result in (78,79,80):
+    jewelType = 'Locket'
+  elif result in (81,82):
+    jewelType = 'Medal'
+  elif result in (83,84,85,86,87.88,89):
+    jewelType = 'Necklace'
+  elif result == 90:
+    jewelType = 'Plate'
+  elif result in (91,92,93,94,95):
+    jewelType = 'Pin'
+  elif result == 96:
+    jewelType = 'Sceptre'
+  elif result in (97,98,99):
+    jewelType = 'Statuette'
+  else:
+    jewelType = 'Tiara'
+    
+  return jewelType + "  " + str(value) + "gp"

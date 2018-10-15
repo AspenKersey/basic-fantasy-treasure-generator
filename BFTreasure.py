@@ -442,16 +442,25 @@ class Application(Frame):
             msg += "   " + str(self.ep) + " electrum pieces\n"
             msg += "   " + str(self.gp) + " gold pieces\n"
             msg += "   " + str(self.pp) + " platinum pieces\n"
+            msg += "\n"
             msg += "  GEMS\n"
             msg += "  ----\n"
             if self.gems == 0:
                 msg += "   NONE\n"
             else:
                 for i in range(self.gems):
-                    msg += "   " + get_gem()
+                    msg += "   " + get_gem() + "\n"
                     
-            msg += "   " + str(self.jewels) + " pieces of jewelry\n"
+            msg += "\n"
+            msg += "  JEWELRY\n"
+            msg += "  -------\n"
+            if self.jewels == 0:
+                msg += "   NONE\n"
+            else:
+                for i in range(self.jewels):
+                    msg += "   " + get_jewelry() + "\n"
             
+            msg += "\n"
             msg += "  MAGIC ITEMS\n"
             msg += "  -----------\n"
             
@@ -466,7 +475,6 @@ class Application(Frame):
       
 
 #main section
-print(randint(1,6))
 root = Tk()
 root.title("BF Treasure Generator")
 #root.geometry('500x500')
