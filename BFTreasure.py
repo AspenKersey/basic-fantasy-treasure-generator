@@ -474,7 +474,7 @@ class Application(Frame):
         return msg
       
 
-#main section
+#main section 
 root = Tk()
 root.title("BF Treasure Generator")
 #root.geometry('500x500')
