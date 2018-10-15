@@ -2,20 +2,13 @@
 # Thorin Schmidt
 # 9/16/2018
 
-from random import randint
+from dice import *
 
 def percent_less_than(num):
   if randint(1, 100) <= num:
     return True
   else:
     return False
-
-def die_roller(num, sides):
-  total = 0
-  for i in range(num):
-    total += randint(1, sides)
-  return total
-
 def type_a():
   '''calculates and returns amount of treasure based on type
   
