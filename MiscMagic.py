@@ -34,7 +34,7 @@ def get_misc():
     elif index == 36:
         misc = "Censer Commanding Air Elementals"
     elif index in (37,38,39):
-        misc = "Cloak of Displacementr"
+        misc = "Cloak of Displacement"
     elif index in (40,41,42,43):
         misc = "Crystal Ball"
     elif index in (44,45):
