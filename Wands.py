@@ -1,4 +1,4 @@
-# Wandss.py
+# Wands.py
 # Thorin Schmidt
 # 10/16/2018
 
