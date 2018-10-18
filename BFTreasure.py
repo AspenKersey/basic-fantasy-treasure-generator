@@ -167,9 +167,46 @@ class Application(Frame):
                     variable = self.chkBtnV
                     ).grid(row = 7, column = 6)
 
-        ttk.Separator(self, orient=HORIZONTAL).grid(row=8, column=0,
-                                                    columnspan=8, sticky="ew")
         
+        Label(self, text = "Unguarded").grid(row=9, column =0, columnspan=5,
+                                             sticky="w")
+        
+        self.btnUnguardedClear = Button(self, text="Clear",
+                                           command = self.clear_ung_types)
+        self.btnUnguardedClear.grid(row=9, column=6, columnspan=2)
+        
+        self.chkBtn1 = BooleanVar()
+        Checkbutton(self, text = "1",
+                    variable = self.chkBtn1
+                    ).grid(row = 10, column = 0)
+        
+        self.chkBtn2 = BooleanVar()
+        Checkbutton(self, text = "2",
+                    variable = self.chkBtn2
+                    ).grid(row = 10, column = 1)
+        
+        self.chkBtn3 = BooleanVar()
+        Checkbutton(self, text = "3",
+                    variable = self.chkBtn3
+                    ).grid(row = 10, column = 2)
+        
+        self.chkBtn45 = BooleanVar()
+        Checkbutton(self, text = "4-5",
+                    variable = self.chkBtn45
+                    ).grid(row = 10, column = 3)
+        
+        self.chkBtn67 = BooleanVar()
+        Checkbutton(self, text = "6-7",
+                    variable = self.chkBtn67
+                    ).grid(row = 10, column = 4)
+        
+        self.chkBtn8 = BooleanVar()
+        Checkbutton(self, text = "8+",
+                    variable = self.chkBtn8
+                    ).grid(row = 10, column = 5)
+                        
+        ttk.Separator(self, orient=HORIZONTAL).grid(row=12, column=0,
+                                                    columnspan=8, sticky="ew")        
         Label(self, text="Treasure").grid(row=13, column=0, columnspan=5,
                                                  sticky="w")
         
@@ -182,6 +219,42 @@ class Application(Frame):
         self.textBoxReport.grid(row=14, column =0, columnspan=8)
         
     def key(self, event):
+        if event.char in  ('1','!'):
+            if self.chkBtn1.get()==False:
+                self.chkBtn1.set(True)
+            else:
+                self.chkBtn1.set(False)        
+        
+        if event.char in  ('2','@'):
+            if self.chkBtn2.get()==False:
+                self.chkBtn2.set(True)
+            else:
+                self.chkBtn2.set(False)
+                
+        if event.char in  ('3','#'):
+            if self.chkBtn3.get()==False:
+                self.chkBtn3.set(True)
+            else:
+                self.chkBtn3.set(False)
+
+        if event.char in  ('4','$', '5', '%'):
+            if self.chkBtn45.get()==False:
+                self.chkBtn45.set(True)
+            else:
+                self.chkBtn45.set(False)
+        
+        if event.char in  ('6','^', '7', '&'):
+            if self.chkBtn67.get()==False:
+                self.chkBtn67.set(True)
+            else:
+                self.chkBtn67.set(False)
+        
+        if event.char in  ('8','*'):
+            if self.chkBtn8.get()==False:
+                self.chkBtn8.set(True)
+            else:
+                self.chkBtn8.set(False)
+        
         if event.char in  ('a','A'):
             if self.chkBtnA.get()==False:
                 self.chkBtnA.set(True)
@@ -343,6 +416,15 @@ class Application(Frame):
         self.chkBtnU.set(0)
         self.chkBtnV.set(0)
         
+    def clear_ung_types(self):
+        """clear the unguarded treasure type checkboxes"""
+        self.chkBtn1.set(0)
+        self.chkBtn2.set(0)
+        self.chkBtn3.set(0)
+        self.chkBtn45.set(0)
+        self.chkBtn67.set(0)
+        self.chkBtn8.set(0)
+        
     def generate_report(self):
         """ calculate treasure and display the results"""
         message = "LAIR\n------------------------------\n"
@@ -420,9 +502,6 @@ class Application(Frame):
 
         if self.chkBtnO.get():
             lairTreasureLists.append(type_o())
-      
-        if self.chkBtnP.get():
-            lairTreasureLists.append(type_p())
                 
         if len(lairTreasureLists) != 0:        
             for list in lairTreasureLists:
