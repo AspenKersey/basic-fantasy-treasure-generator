@@ -56,7 +56,7 @@ def type_a():
   if percent_less_than(30):
     magic += "Any 3"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("A",copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 def type_b():
   '''calculates and returns amount of treasure based on type
@@ -104,7 +104,7 @@ def type_b():
   if percent_less_than(10):
     magic += "1 weapon or armor"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("B", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 def type_c():
   '''calculates and returns amount of treasure based on type
@@ -149,7 +149,7 @@ def type_c():
   if percent_less_than(15):
     magic += "any 1d2"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("C", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 def type_d():
   '''calculates and returns amount of treasure based on type
@@ -196,7 +196,7 @@ def type_d():
   if percent_less_than(20):
     magic += "any 1d2 + 1 potion"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("D", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 def type_e():
   '''calculates and returns amount of treasure based on type
@@ -244,7 +244,7 @@ def type_e():
   if percent_less_than(30):
     magic += "any 1d4 + 1 scroll"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("E", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 def type_f():
   '''calculates and returns amount of treasure based on type
@@ -292,7 +292,7 @@ def type_f():
   if percent_less_than(35):
     magic += "any 1d4 except weapons + 1 potion + 1 scroll"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("F", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 def type_g():
   '''calculates and returns amount of treasure based on type
@@ -334,7 +334,7 @@ def type_g():
   if percent_less_than(50):
     magic += "any 1d4 = 1 scroll"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("G", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 def type_h():
   '''calculates and returns amount of treasure based on type
@@ -383,7 +383,7 @@ def type_h():
   if percent_less_than(20):
     magic += "any 1d4 + 1 potion + 1 scroll"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("H", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_i():
@@ -423,7 +423,7 @@ def type_i():
   if percent_less_than(15):
     magic += "any 1"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("I", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_j():
@@ -457,7 +457,7 @@ def type_j():
   #magic items
   '''none'''
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("J", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_k():
@@ -493,7 +493,7 @@ def type_k():
   #magic items
   '''none'''
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("K", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_l():
@@ -526,7 +526,7 @@ def type_l():
   #magic items
   '''none'''
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("L", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_m():
@@ -568,7 +568,7 @@ def type_m():
   #magic items
   '''none'''
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("M", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_n():
@@ -599,7 +599,7 @@ def type_n():
   if percent_less_than(40):
     magic += "2d4 potions"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("N", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_o():
@@ -630,7 +630,7 @@ def type_o():
   if percent_less_than(50):
     magic += "1d4 scrolls"
         
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("O", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_p():
@@ -660,7 +660,7 @@ def type_p():
   #magic items
   '''none''' 
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("P", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_q():
@@ -692,7 +692,7 @@ def type_q():
   #magic items
   '''none'''   
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("Q", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_r():
@@ -724,7 +724,7 @@ def type_r():
   #magic items
   '''none'''
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("R", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_s():
@@ -756,7 +756,7 @@ def type_s():
   #magic items
   '''none'''
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("S", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_t():
@@ -788,7 +788,7 @@ def type_t():
   #magic items
   '''none'''
 
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("T",copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_u():
@@ -836,7 +836,7 @@ def type_u():
   if percent_less_than(2):
     magic += "any 1"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("U", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
 def type_v():
@@ -885,7 +885,7 @@ def type_v():
   if percent_less_than(5):
     magic += "any 1"  
   
-  return (copper, silver, electrum, gold, platinum, gems, jewels, magic)
+  return ("V", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 def gem_value():
   '''calculates the value of a single gem, then returns it as a string

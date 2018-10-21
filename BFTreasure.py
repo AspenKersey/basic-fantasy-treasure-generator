@@ -445,6 +445,50 @@ class Application(Frame):
         self.multiplier = \
           simpledialog.askinteger("Input", "Type "+treasureType+" multiplier?",
                                   minvalue=1, maxvalue=99)
+        
+    def print_treasure(self, tList):
+        ''' print details of randomly generated treasure'''
+        
+        msg = ""
+        
+        msg = "Type " + tList[0] + "\n"
+        msg +=  "  COINS\n"
+        msg += "  -----\n"
+        msg += "   " + str(tList[1]) + " copper pieces\n"
+        msg += "   " + str(tList[2]) + " silver pieces\n"
+        msg += "   " + str(tList[3]) + " electrum pieces\n"
+        msg += "   " + str(tList[4]) + " gold pieces\n"
+        msg += "   " + str(tList[5]) + " platinum pieces\n"
+        msg += "\n"
+        msg += "  GEMS\n"
+        msg += "  ----\n"
+        if tList[6] == 0:
+            msg += "   NONE\n"
+        else:
+            for i in range(tList[6]):
+                msg += "   " + get_gem() + "\n"
+                
+        msg += "\n"
+        msg += "  JEWELRY\n"
+        msg += "  -------\n"
+        if tList[7] == 0:
+            msg += "   NONE\n"
+        else:
+            for i in range(tList[7]):
+                msg += "   " + get_jewelry() + "\n"
+        
+        msg += "\n"
+        msg += "  MAGIC ITEMS\n"
+        msg += "  -----------\n"
+        
+        if tList[8] == "":
+            msg += "   NONE\n"
+        else:
+            msg += "   " + tList[8] + "\n"
+        
+        msg += "\n"
+        
+        return msg
 
     def run_through_lair_treasures(self):
         msg = ""
@@ -459,97 +503,50 @@ class Application(Frame):
         self.magic =[]
         
         if self.chkBtnA.get():
-            lairTreasureLists.append(type_a())
+            msg += self.print_treasure(type_a())
       
         if self.chkBtnB.get():
-            lairTreasureLists.append(type_b())
+            msg += self.print_treasure(type_b())
         
         if self.chkBtnC.get():
-            lairTreasureLists.append(type_c())
+            msg += self.print_treasure(type_c())
       
         if self.chkBtnD.get():
-            lairTreasureLists.append(type_d())
+            msg += self.print_treasure(type_d())
         
         if self.chkBtnE.get():
-            lairTreasureLists.append(type_e())
+            msg += self.print_treasure(type_e())
       
         if self.chkBtnF.get():
-            lairTreasureLists.append(type_f())
+            msg += self.print_treasure(type_f())
 
         if self.chkBtnG.get():
-            lairTreasureLists.append(type_g())
+            msg += self.print_treasure(type_g())
       
         if self.chkBtnH.get():
-            lairTreasureLists.append(type_h())
+            msg += self.print_treasure(type_h())
             
         if self.chkBtnI.get():
-            lairTreasureLists.append(type_i())
+            msg += self.print_treasure(type_i())
       
         if self.chkBtnJ.get():
-            lairTreasureLists.append(type_j())
+            msg += self.print_treasure(type_j())
         
         if self.chkBtnK.get():
-            lairTreasureLists.append(type_k())
+            msg += self.print_treasure(type_k())
       
         if self.chkBtnL.get():
-            lairTreasureLists.append(type_l())
+            msg += self.print_treasure(type_l())
         
         if self.chkBtnM.get():
-            lairTreasureLists.append(type_m())
+            msg += self.print_treasure(type_m())
       
         if self.chkBtnN.get():
-            lairTreasureLists.append(type_n())
+            msg += self.print_treasure(type_n())
 
         if self.chkBtnO.get():
-            lairTreasureLists.append(type_o())
-                
-        if len(lairTreasureLists) != 0:        
-            for list in lairTreasureLists:
-                self.cp += list[0]
-                self.sp += list[1]
-                self.ep += list[2]
-                self.gp += list[3]
-                self.pp += list[4]
-                self.gems += list[5]
-                self.jewels += list [6]
-                self.magic.append(list[7])
-            
-            msg =  "  COINS\n"
-            msg += "  -----\n"
-            msg += "   " + str(self.cp) + " copper pieces\n"
-            msg += "   " + str(self.sp) + " silver pieces\n"
-            msg += "   " + str(self.ep) + " electrum pieces\n"
-            msg += "   " + str(self.gp) + " gold pieces\n"
-            msg += "   " + str(self.pp) + " platinum pieces\n"
-            msg += "\n"
-            msg += "  GEMS\n"
-            msg += "  ----\n"
-            if self.gems == 0:
-                msg += "   NONE\n"
-            else:
-                for i in range(self.gems):
-                    msg += "   " + get_gem() + "\n"
-                    
-            msg += "\n"
-            msg += "  JEWELRY\n"
-            msg += "  -------\n"
-            if self.jewels == 0:
-                msg += "   NONE\n"
-            else:
-                for i in range(self.jewels):
-                    msg += "   " + get_jewelry() + "\n"
-            
-            msg += "\n"
-            msg += "  MAGIC ITEMS\n"
-            msg += "  -----------\n"
-            
-            if self.magic[0] == "":
-                msg += "   NONE\n"
-            else:
-                for item in self.magic:
-                    msg += "   " + item + "\n"
-            
-            msg += "\n"
+            msg += self.print_treasure(type_o())
+           
         return msg
       
 
