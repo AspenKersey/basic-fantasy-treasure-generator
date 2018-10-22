@@ -481,10 +481,11 @@ class Application(Frame):
         msg += "  MAGIC ITEMS\n"
         msg += "  -----------\n"
         
-        if tList[8] == "":
+        if tList[8] == []:
             msg += "   NONE\n"
         else:
-            msg += "   " + tList[8] + "\n"
+            for item in tList[8]:
+                msg += "   " + str(item) + "\n"
         
         msg += "\n"
         
