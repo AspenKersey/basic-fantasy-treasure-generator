@@ -22,7 +22,7 @@ def type_a():
   platinum = 0
   gems = 0
   jewels = 0
-  magic = ""
+  magic = []
   
   #copper
   if percent_less_than(50):
@@ -54,7 +54,10 @@ def type_a():
   
   #magic items
   if percent_less_than(30):
-    magic += "Any 3"  
+    ''' [any, any weapon or armor, any exc weapon, potions, scrolls]
+      each item is a tuple fornuse with die_roller. (sides, dice) if nothing, then
+      the tuple will have (0,0)'''
+    magic = [(3,1),(0,0),(0,0),(0,0),(0,0)]
   
   return ("A",copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
@@ -102,7 +105,10 @@ def type_b():
   
   #magic items
   if percent_less_than(10):
-    magic += "1 weapon or armor"  
+    ''' [any, any weapon or armor, any exc weapon, potions, scrolls]
+      each item is a tuple fornuse with die_roller. (sides, dice) if nothing, then
+      the tuple will have (0,0)'''
+    magic = [(0,0),(1,1),(0,0),(0,0),(0,0)]
   
   return ("B", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
@@ -147,7 +153,10 @@ def type_c():
   
   #magic items
   if percent_less_than(15):
-    magic += "any 1d2"  
+    ''' [any, any weapon or armor, any exc weapon, potions, scrolls]
+      each item is a tuple fornuse with die_roller. (sides, dice) if nothing, then
+      the tuple will have (0,0)'''
+    magic = [(1,2),(0,0),(0,0),(0,0),(0,0)]  
   
   return ("C", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
