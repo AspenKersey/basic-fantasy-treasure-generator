@@ -9,6 +9,7 @@ from tkinter import font
 from tkinter import simpledialog
 from random import randint
 from TreasureType import *
+from Magic import *
 
 class Application(Frame):
     
@@ -485,7 +486,7 @@ class Application(Frame):
             msg += "   NONE\n"
         else:
             for item in tList[8]:
-                msg += "   " + str(item) + "\n"
+                msg += "   " + str(get_magic(item)) + "\n"
         
         msg += "\n"
         
