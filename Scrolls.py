@@ -36,15 +36,15 @@ def get_scroll():
     elif index == 35:
         scroll = "Magic-User Spell Scroll (7 Spells)"
     elif index in (36,37,38,39,40):
-        scroll = "Cursed Scroll"
+        scroll = "Cursed Scroll - " + choose_curse()
     elif index in (41,42,43,44,45,46):
-        scroll = "Protection from Elementals"
+        scroll = "Scroll: Protection from Elementals"
     elif index in(47,48,49,50,51,52,53,54,55,56):
-        scroll = "Protection from Lycanthropes"
+        scroll = "Scroll: Protection from Lycanthropes"
     elif index in(57,58,59,60,61):
-        scroll = "Protection from Magic"        
+        scroll = "Scroll: Protection from Magic"        
     elif index in (62,63,64,65,66,67,68,69,70,71,72,73,74,75):
-        scroll = "Protection from Undead"
+        scroll = "Scroll: Protection from Undead"
     elif index in (76,77,78,79,80,81,82,83,84,85):
         scroll = "Map to Treasure Type A"
     elif index in (86,87,88,89):
@@ -56,6 +56,22 @@ def get_scroll():
         
     msg = scroll
     return msg
+
+def choose_curse():
+    curse = ""
+    
+    index = d4()
+    
+    if index == 1:
+        curse = "-4 decrease to an ability score (minimum 1)."
+    elif index == 2:
+        curse = "-4 penalty on attack rolls and saves."
+    elif index == 3:
+        curse = "Each round of combat, the target has a 50% chance to act normally; otherwise, it takes no action."
+    else:
+        curse = "GM's Diabolical Choice!"
+    
+    return curse
 
 #testing
 if __name__ == '__main__':
