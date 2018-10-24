@@ -13,9 +13,23 @@ from Wands import *
 from Weapons import *
 
 
-def get_magic(howmany):
+def get_magic(mList):
     '''randomly determine a category of magic item'''
-    number = howmany[0]
-    sides = howmany[1]
+    itemList = []
     
-    return (number, sides)
+    if mList[0][0] > 0:
+        itemList.append(get_any(mList[0]))
+
+    return itemList
+
+def get_any(dicelist):
+    
+    anyList = []
+    for i in range(die_roller(dicelist[0],dicelist[1])):
+        index = d100()
+        
+        if index in range(1, 26):
+            anyList.append(get_weapon())
+        elif index in range(26,36):
+            anyList.append(get_armor())
+        
