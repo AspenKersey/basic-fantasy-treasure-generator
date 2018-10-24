@@ -18,13 +18,16 @@ def get_magic(mList):
     itemList = []
     
     if mList[0][0] > 0:
-        itemList.append(get_any(mList[0]))
+        for i in range(die_roller(mList[0][0],mList[0][1])):
+            itemList.append(get_any())
         
     if mList[1][0] > 0:
-        itemList.append(get_any_weap_or_arm(mList[1]))
+        for i in range(die_roller(mList[1][0],mList[1][1])):
+            itemList.append(get_any_weap_or_arm())
             
     if mList[2][0] > 0:
-        itemList.append(get_any_exc_Weap(mList[2]))
+        for i in range(die_roller(mList[2][0],mList[2][1])):
+            itemList.append(get_any_exc_Weap())
             
     if mList[3][0] > 0:
         for i in range(die_roller(mList[3][0],mList[3][1])):
@@ -36,62 +39,50 @@ def get_magic(mList):
 
     return itemList
 
-def get_any(diceList):
-    
-    anyList = []
-    for i in range(die_roller(diceList[0],diceList[1])):
+def get_any():
+
         index = d100()
         
         if index in range(1, 26):
-            anyList.append(get_weapon())
+            return get_weapon()
         elif index in range(26,36):
-            anyList.append(get_armor())
+            return get_armor()
         elif index in range(36,56):
-            anyList.append(get_potion())
+            return get_potion()
         elif index in range(56,86):
-            anyList.append(get_scroll())
+            return get_scroll()
         elif index in range(86,91):
-            anyList.append(get_ring())
+            return get_ring()
         elif index in range(91,96):
-            anyList.append(get_wand())
+            return get_wand()
         else:
-            anyList.append(get_misc())
-                
-    return anyList
+            return get_misc()
 
-def get_any_weap_or_arm(diceList):
-    anyWeapList = []
-    
-    for i in range(die_roller(diceList[0],diceList[1])):
-        index = d100()
-        
-        if index in range(1, 71):
-            anyWeapList.append(get_weapon())
-        else:
-            anyWeapList.append(get_armor())
-       
-    return anyWeapList
+def get_any_weap_or_arm():
 
-def get_any_exc_Weap(diceList):
-    excWeapList = ""
+    index = d100()
     
-    for i in range(die_roller(diceList[0],diceList[1])):
-        index = d100()
-        
-        if index in range(1,13):
-            excWeapList.append(get_armor())
-        elif index in range(13,41):
-            excWeapList.append(get_potion())
-        elif index in range(41,80):
-            excWeapList.append(get_scroll())
-        elif index in range(80,87):
-            excWeapList.append(get_ring())
-        elif index in range(87,93):
-            excWeapList.append(get_wand())
-        else:
-            excWeapList.append(get_misc())    
+    if index in range(1, 71):
+        return get_weapon()
+    else:
+        return get_armor()
+
+def get_any_exc_Weap():
+
+    index = d100()
     
-    return excWeapList
+    if index in range(1,13):
+        return get_armor()
+    elif index in range(13,41):
+        return get_potion()
+    elif index in range(41,80):
+        return get_scroll()
+    elif index in range(80,87):
+        return get_ring()
+    elif index in range(87,93):
+        return get_wand()
+    else:
+        return get_misc()
 
 #testing
 if __name__ == '__main__':

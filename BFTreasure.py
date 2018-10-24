@@ -485,7 +485,9 @@ class Application(Frame):
         if tList[8] == []:
             msg += "   NONE\n"
         else:
-            msg += "   " + get_magic(tList[8]) + "\n"
+            magicList = get_magic(tList[8])
+            for item in magicList:
+                msg += "   " + item + "\n"
         
         msg += "\n"
         
