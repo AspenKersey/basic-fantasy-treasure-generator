@@ -14,7 +14,7 @@ from Magic import *
 class Application(Frame):
     
     def __init__(self, master):
-        """ initialize rthe frame"""
+        """ initialize the frame"""
         super(Application, self).__init__(master)
         self.grid()
         
@@ -35,7 +35,6 @@ class Application(Frame):
     def create_widgets(self):
         """ create widgets in frame """
         self.bind_all('<Key>',self.key)
-        
         
         self.lblLair = Label(self, text = "Lair Types")
         self.lblLair.grid(row = 0, column = 0, columnspan = 3, sticky="w")
@@ -208,16 +207,15 @@ class Application(Frame):
                         
         ttk.Separator(self, orient=HORIZONTAL).grid(row=12, column=0,
                                                     columnspan=8, sticky="ew")        
-        Label(self, text="Treasure").grid(row=13, column=0, columnspan=5,
-                                                 sticky="w")
+        Label(self, text="Treasure").grid(row=0, column=8, sticky="w")
         
         self.btnGenerateReport = Button(self, text="Generate",
                                         command=self.generate_report)
-        self.btnGenerateReport.grid(row=13, column=6, columnspan=2)
+        self.btnGenerateReport.grid(row=0, column=9)
 
 
-        self.textBoxReport = Text(self, width = 50, height = 15, wrap = WORD)
-        self.textBoxReport.grid(row=14, column =0, columnspan=8)
+        self.textBoxReport = Text(self, width = 70, height = 35, wrap = WORD)
+        self.textBoxReport.grid(row=1, column =8, rowspan=15, columnspan = 2)
         
     def key(self, event):
         if event.char in  ('1','!'):
