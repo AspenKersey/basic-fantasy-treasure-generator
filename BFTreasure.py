@@ -432,19 +432,18 @@ class Application(Frame):
         message += self.run_through_lair_treasures()
 
         message += "INDIVIDUAL\n------------------------------\n"
-        if self.chkBtnQ.get():
-            self.get_numbers("Q")
-            message += "\n" + str(self.multiplier)
+        message += "\n" + str(self.run_through_ind_treasures)
 
         message += "UNGUARDED\n------------------------------\n"
+        #message += "\n" + str(self.run_through_ung_treasures)
         
         self.textBoxReport.delete(0.0,END)
         self.textBoxReport.insert(0.0, message)
 
         
-    def get_numbers(self, treasureType):
+    def get_numbers(self):
         self.multiplier = \
-          simpledialog.askinteger("Input", "Type "+treasureType+" multiplier?",
+          simpledialog.askinteger("Input", "How many individuals?",
                                   minvalue=1, maxvalue=99)
         
     def print_treasure(self, tList):
@@ -495,15 +494,6 @@ class Application(Frame):
 
     def run_through_lair_treasures(self):
         msg = ""
-        lairTreasureLists = []
-        self.cp =0
-        self.sp =0
-        self.ep =0
-        self.gp =0
-        self.pp =0
-        self.gems =0
-        self.jewels=0
-        self.magic =[]
         
         if self.chkBtnA.get():
             msg += self.print_treasure(type_a())
@@ -551,6 +541,34 @@ class Application(Frame):
             msg += self.print_treasure(type_o())
            
         return msg
+    
+    def run_through_ind_treasures(self):
+        msg = ""
+        multiplier = self.get_numbers()
+        
+        if self.chkBtnP.get():
+            msg += self.print_treasure(type_p(multiplier))
+      
+        if self.chkBtnQ.get():
+            msg += self.print_treasure(type_q(multiplier))
+        
+        if self.chkBtnR.get():
+            msg += self.print_treasure(type_r(multiplier))
+      
+        if self.chkBtnS.get():
+            msg += self.print_treasure(type_s(multiplier))
+        
+        if self.chkBtnT.get():
+            msg += self.print_treasure(type_t(multiplier))
+      
+        if self.chkBtnU.get():
+            msg += self.print_treasure(type_u(multiplier))
+
+        if self.chkBtnV.get():
+            msg += self.print_treasure(type_v(multiplier))
+         
+        return msg
+    
       
 
 #main section 

@@ -9,6 +9,7 @@ def percent_less_than(num):
     return True
   else:
     return False
+  
 def type_a():
   '''calculates and returns amount of treasure based on type
   
@@ -666,7 +667,7 @@ def type_o():
   return ("O", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_p():
+def type_p(multiplier):
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -696,7 +697,7 @@ def type_p():
   return ("P", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_q():
+def type_q(multiplier):
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -728,7 +729,7 @@ def type_q():
   return ("Q", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_r():
+def type_r(multiplier):
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -760,7 +761,7 @@ def type_r():
   return ("R", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_s():
+def type_s(multiplier):
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -792,7 +793,7 @@ def type_s():
   return ("S", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_t():
+def type_t(multiplier):
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -824,7 +825,7 @@ def type_t():
   return ("T",copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_u():
+def type_u(multiplier):
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
@@ -872,7 +873,7 @@ def type_u():
   return ("U", copper, silver, electrum, gold, platinum, gems, jewels, magic)
 
 
-def type_v():
+def type_v(multiplier):
   '''calculates and returns amount of treasure based on type
   
   the treasure types are those listed in the treasure tables from page
